@@ -68,7 +68,11 @@ elif page == "Courses":
                 s.write(f"📖 {course['desc']}")
                 s.button("Enroll Now", key=course["name"])  # non-functional placeholder
                 s.markdown("---")
-
+    s.markdown(
+        f"""
+           Created by Stark Academy {date.today().year} | All Rights Reserved
+        """
+     )
 
 elif page == "Faculty":
     Facutly = [
@@ -104,9 +108,20 @@ elif page == "Faculty":
                 s.write(f"Email : {fact['Email']}")
                 s.write(f"Contact : {fact['Contact']}")
                 s.markdown("---")
+    s.markdown(
+            f"""
+               Created by Stark Academy {date.today().year} | All Rights Reserved
+            """
+         )
 
 elif page == "Dashboard":
-    pass
+    s.title("Dashboard Page")
+    s.markdown("---")
+    s.markdown(
+        f"""
+           Created by Stark Academy {date.today().year} | All Rights Reserved
+        """
+     )
 
 
 elif page == "Feedback":
@@ -121,3 +136,9 @@ elif page == "Feedback":
         s.success("Thanks for submitting your feedback")
     else:
         s.error("Please fill the Name and Score input")
+    s.markdown("---")
+    s.markdown(
+        f"""
+           Created by Stark Academy {date.today().year} | All Rights Reserved
+        """
+     )    
